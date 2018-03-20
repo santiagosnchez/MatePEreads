@@ -99,10 +99,10 @@ with gzip.open(basefile+"_unpaired"+".fastq.gz","w") as unp:
     for key in lookup1.keys():
         unp.write(' '.join([key,lookup1[key][2]]))
         unp.write(lookup1[key][0]+"+\n"+lookup1[key][1])
-                c += 1
+        c += 1
     for key in lookup2.keys():
         unp.write(' '.join([key,lookup2[key][2]]))
         unp.write(lookup2[key][0]+"+\n"+lookup2[key][1])
-                c += 1
-        sys.stdout.write("\n {:<18}{} reads were unpaired\n".format("[MatePEreads.py]",c))
+        c += 1
+    sys.stdout.write("\n {:<18}{} reads were unpaired\n".format("[MatePEreads.py]",c))
 
